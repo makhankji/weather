@@ -47,26 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         weatherResult.innerHTML = weatherDetails;
     }
-    // function changeBackgroundImage(temperature) {
-    //     let imageUrl = '';
-
-    //     if (temperature  < 10) {
-    //         imageUrl = url(freezy.jpg);
-    //     } else if (temperature >= 10 && temperature <= 25) {
-    //         imageUrl = 'url(image_url_3)';
-    //     } else if (temperature >= 25 && temperature <= 35) {
-    //         imageUrl = 'url(image_url_4)';
-    //     } else {
-    //         imageUrl = 'url(default_image_url)';
-    //     }
-
-    //     container.style.backgroundImage = imageUrl;
-    // }
-
+   
     // Trigger getWeather on pressing "Enter" key in the city input field
     cityInput.addEventListener('keydown', (event) => {
-        if (event.keyCode === 13) { // Check if "Enter" key is pressed (key code 13)
-            event.preventDefault(); // Prevent form submission (to avoid page reload)
+        if (event.keyCode === 13) { 
+            event.preventDefault(); 
             const city = cityInput.value;
             if (city) {
                 getWeather(city);
@@ -76,7 +61,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Get weather data automatically on page load for a default city
-    // const defaultCity = 'Greater Noida'; // Set your default city here
-    // getWeather(defaultCity); // Fetch weather data for the default cityity
+    
 });
